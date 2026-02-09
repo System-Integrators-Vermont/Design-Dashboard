@@ -60,10 +60,22 @@
         .header h1 { font-size: 1.75rem; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; }
         .header-meta { font-size: 0.875rem; color: var(--text-muted); }
         .header-meta span { color: var(--accent-orange); }
-        .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 32px; }
+
+        .metric-subtext {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+        .highlight-metric {
+            border-color: rgba(249, 159, 52, 0.4);
+            background: linear-gradient(135deg, rgba(249, 159, 52, 0.08), transparent);
+        }
+        .metrics-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 32px; }
         .metric-card {
             background: var(--bg-card); border: 1px solid var(--border-subtle);
-            border-radius: 12px; padding: 24px; position: relative; overflow: hidden;
+            border-radius: 12px; padding: 20px 14px; position: relative; overflow: hidden;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .metric-card:hover { border-color: var(--border-accent); transform: translateY(-2px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
@@ -217,7 +229,7 @@
         .rep-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .rep-card {
             background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle);
-            border-radius: 12px; padding: 24px; position: relative; overflow: hidden; transition: all 0.3s ease;
+            border-radius: 12px; padding: 20px 14px; position: relative; overflow: hidden; transition: all 0.3s ease;
         }
         .rep-card:hover { background: rgba(255, 255, 255, 0.04); border-color: var(--border-accent); }
         .rep-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; }
@@ -345,6 +357,7 @@
             <div class="metric-card"><div class="metric-icon">💰</div><div class="metric-label">Total Pipeline</div><div class="metric-value">$1.37M</div></div>
             <div class="metric-card"><div class="metric-icon">🎯</div><div class="metric-label">Weighted Value</div><div class="metric-value">$1.04M</div></div>
             <div class="metric-card"><div class="metric-icon">💼</div><div class="metric-label">Total Opportunities</div><div class="metric-value">20</div></div>
+            <div class="metric-card highlight-metric"><div class="metric-icon">💡</div><div class="metric-label">Lighting Designs</div><div class="metric-value">3</div><div class="metric-subtext">Roux • Point House • Peebles</div></div>
             <div class="metric-card"><div class="metric-icon">📈</div><div class="metric-label">Avg Deal Size</div><div class="metric-value">$68K</div></div>
         </div>
         <div class="charts-section">
