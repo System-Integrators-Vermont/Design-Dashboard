@@ -60,7 +60,6 @@
         .header h1 { font-size: 1.75rem; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; }
         .header-meta { font-size: 0.875rem; color: var(--text-muted); }
         .header-meta span { color: var(--accent-orange); }
-
         .metric-subtext {
             font-size: 0.65rem;
             color: var(--text-muted);
@@ -244,7 +243,7 @@
         .stat-value { font-size: 0.875rem; font-weight: 600; color: var(--accent-orange); }
         .stat-value.warning { color: var(--warning); }
         .stat-value.muted { color: var(--text-muted); }
-        .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+        .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 24px; }
         .summary-card {
             background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-subtle);
             border-radius: 12px; padding: 28px; text-align: center; transition: all 0.3s ease;
@@ -253,10 +252,12 @@
         .summary-card.orange { border-color: rgba(249, 159, 52, 0.3); }
         .summary-card.green { border-color: rgba(74, 222, 128, 0.3); }
         .summary-card.gray { border-color: var(--border-subtle); }
+        .summary-card.blue { border-color: rgba(74, 158, 255, 0.3); }
         .summary-card h3 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
         .summary-card.orange h3 { color: var(--accent-orange); }
         .summary-card.green h3 { color: var(--success); }
         .summary-card.gray h3 { color: var(--text-muted); }
+        .summary-card.blue h3 { color: #4a9eff; }
         .summary-card .big-value { font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
         .summary-card.orange .big-value {
             background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
@@ -264,6 +265,7 @@
         }
         .summary-card.green .big-value { color: var(--success); }
         .summary-card.gray .big-value { color: var(--text-muted); }
+        .summary-card.blue .big-value { color: #4a9eff; }
         .summary-card p { font-size: 0.8rem; color: var(--text-muted); margin: 4px 0; }
         .likelihood-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px; }
         .likelihood-card {
@@ -354,11 +356,11 @@
             <div class="header-meta">Real-time Analysis <span>•</span> February 2026</div>
         </div>
         <div class="metrics-grid">
-            <div class="metric-card"><div class="metric-icon">💰</div><div class="metric-label">Total Pipeline</div><div class="metric-value">$1.37M</div></div>
-            <div class="metric-card"><div class="metric-icon">⚖️</div><div class="metric-label">Weighted Value</div><div class="metric-value">$1.04M</div></div>
-            <div class="metric-card"><div class="metric-icon">🗒️</div><div class="metric-label">Total Opportunities</div><div class="metric-value">20</div></div>
-            <div class="metric-card highlight-metric"><div class="metric-icon">💡</div><div class="metric-label">Lighting Designs</div><div class="metric-value">3</div><div class="metric-subtext">Roux • Point House • Peebles</div></div>
-            <div class="metric-card"><div class="metric-icon">📈</div><div class="metric-label">Avg Deal Size</div><div class="metric-value">$68K</div></div>
+            <div class="metric-card"><div class="metric-icon">💰</div><div class="metric-label">Total Pipeline</div><div class="metric-value">$1.80M</div></div>
+            <div class="metric-card"><div class="metric-icon">⚖️</div><div class="metric-label">Weighted Value</div><div class="metric-value">$1.33M</div></div>
+            <div class="metric-card"><div class="metric-icon">🗒️</div><div class="metric-label">Total Opportunities</div><div class="metric-value">25</div></div>
+            <div class="metric-card highlight-metric"><div class="metric-icon">💡</div><div class="metric-label">Lighting Designs</div><div class="metric-value">4</div><div class="metric-subtext">Roux • Point House • McBride • Soundtoys</div></div>
+            <div class="metric-card"><div class="metric-icon">📈</div><div class="metric-label">Avg Deal Size</div><div class="metric-value">$72K</div></div>
         </div>
         <div class="charts-section">
             <div class="chart-card"><h3>Pipeline by Client Type</h3><div class="chart-container"><canvas id="clientTypeChart"></canvas></div></div>
@@ -368,14 +370,14 @@
             <div class="ytd-header"><h2>2026 Year-to-Date Performance</h2><span class="ytd-badge">Live</span></div>
             <div class="ytd-metrics">
                 <div class="ytd-metric"><div class="ytd-metric-label">Annual Goal</div><div class="ytd-metric-value highlight">$4.20M</div></div>
-                <div class="ytd-metric"><div class="ytd-metric-label">YTD Goal (Day 35)</div><div class="ytd-metric-value">$403K</div></div>
-                <div class="ytd-metric"><div class="ytd-metric-label">Actual Closed</div><div class="ytd-metric-value">$222K</div></div>
-                <div class="ytd-metric"><div class="ytd-metric-label">Gap to Goal</div><div class="ytd-metric-value negative">-$181K</div></div>
+                <div class="ytd-metric"><div class="ytd-metric-label">YTD Goal (Day 45)</div><div class="ytd-metric-value">$518K</div></div>
+                <div class="ytd-metric"><div class="ytd-metric-label">Actual Closed</div><div class="ytd-metric-value">$318K</div></div>
+                <div class="ytd-metric"><div class="ytd-metric-label">Gap to Goal</div><div class="ytd-metric-value negative">-$200K</div></div>
             </div>
             <div class="progress-section">
-                <div class="progress-header"><span class="progress-label">Progress vs YTD Goal</span><span class="progress-value">55.1%</span></div>
+                <div class="progress-header"><span class="progress-label">Progress vs YTD Goal</span><span class="progress-value">61.4%</span></div>
                 <div class="progress-bar"><div class="progress-fill ytd-progress" style="width: 0%;"></div></div>
-                <div class="progress-footer"><span><strong>35 days</strong> into 2026</span><span class="behind">Behind pace by $181K</span></div>
+                <div class="progress-footer"><span><strong>45 days</strong> into 2026</span><span class="behind">Behind pace by $200K</span></div>
             </div>
         </div>
         <div class="tabs">
@@ -388,8 +390,8 @@
             <div class="section">
                 <h2>Pipeline by Status</h2>
                 <div class="data-grid">
-                    <div class="data-card"><h3>1-NEW Stage</h3><div class="data-row"><span class="data-label">Opportunities</span><span class="data-value">5</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$0</span></div><div class="data-row"><span class="data-label">% of Pipeline</span><span class="data-value">0%</span></div></div>
-                    <div class="data-card"><h3>2-Opportunity Stage</h3><div class="data-row"><span class="data-label">Opportunities</span><span class="data-value">12</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$1.37M</span></div><div class="data-row"><span class="data-label">% of Pipeline</span><span class="data-value">100%</span></div></div>
+                    <div class="data-card"><h3>1-NEW Stage</h3><div class="data-row"><span class="data-label">Opportunities</span><span class="data-value">3</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$0</span></div><div class="data-row"><span class="data-label">% of Pipeline</span><span class="data-value">0%</span></div></div>
+                    <div class="data-card"><h3>2-Opportunity Stage</h3><div class="data-row"><span class="data-label">Opportunities</span><span class="data-value">22</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$1.80M</span></div><div class="data-row"><span class="data-label">% of Pipeline</span><span class="data-value">100%</span></div></div>
                 </div>
             </div>
             <div class="section">
@@ -397,25 +399,26 @@
                 <div class="deal-item"><div class="deal-left"><div class="deal-rank">1</div><div class="deal-info"><h3>Point House</h3><p>New Construction • Nick • Newbury, NH</p></div></div><div class="deal-right"><div class="deal-value">$300K</div><div class="deal-likelihood">90%</div></div></div>
                 <div class="deal-item"><div class="deal-left"><div class="deal-rank">2</div><div class="deal-info"><h3>Peebles</h3><p>New Construction • Nick • South Hero, VT</p></div></div><div class="deal-right"><div class="deal-value">$300K</div><div class="deal-likelihood">70%</div></div></div>
                 <div class="deal-item"><div class="deal-left"><div class="deal-rank">3</div><div class="deal-info"><h3>Roux</h3><p>New Construction • Nick</p></div></div><div class="deal-right"><div class="deal-value">$250K</div><div class="deal-likelihood">90%</div></div></div>
-                <div class="deal-item"><div class="deal-left"><div class="deal-rank">4</div><div class="deal-info"><h3>Sugarbush Golf</h3><p>New Construction • Nick • Warren, VT</p></div></div><div class="deal-right"><div class="deal-value">$150K</div><div class="deal-likelihood">50%</div></div></div>
-                <div class="deal-item"><div class="deal-left"><div class="deal-rank">5</div><div class="deal-info"><h3>Bruce Cabin</h3><p>New Construction • Nick • Stowe, VT</p></div></div><div class="deal-right"><div class="deal-value">$140K</div><div class="deal-likelihood">90%</div></div></div>
+                <div class="deal-item"><div class="deal-left"><div class="deal-rank">4</div><div class="deal-info"><h3>McBride Quechee Theater</h3><p>New Construction • Nick • Quechee, VT</p></div></div><div class="deal-right"><div class="deal-value">$250K</div><div class="deal-likelihood">50%</div></div></div>
+                <div class="deal-item"><div class="deal-left"><div class="deal-rank">5</div><div class="deal-info"><h3>Sugarbush Golf</h3><p>New Construction • Nick • Warren, VT</p></div></div><div class="deal-right"><div class="deal-value">$150K</div><div class="deal-likelihood">50%</div></div></div>
             </div>
             <div class="section">
                 <h2>Pipeline by Scope</h2>
-                <div class="scope-item"><div class="scope-header"><span class="scope-name">New Construction</span><span class="scope-value">$1.24M (91%)</span></div><div class="scope-bar"><div class="scope-fill orange" style="width: 91%"></div></div></div>
-                <div class="scope-item"><div class="scope-header"><span class="scope-name">Lighting Fixtures</span><span class="scope-value">$50K (4%)</span></div><div class="scope-bar"><div class="scope-fill orange" style="width: 4%"></div></div></div>
-                <div class="scope-item"><div class="scope-header"><span class="scope-name">AV</span><span class="scope-value">$39K (3%)</span></div><div class="scope-bar"><div class="scope-fill purple" style="width: 3%"></div></div></div>
-                <div class="scope-item"><div class="scope-header"><span class="scope-name">Shades</span><span class="scope-value">$25K (2%)</span></div><div class="scope-bar"><div class="scope-fill green" style="width: 2%"></div></div></div>
-                <div class="scope-item"><div class="scope-header"><span class="scope-name">Network</span><span class="scope-value">$2K (0%)</span></div><div class="scope-bar"><div class="scope-fill pink" style="width: 1%"></div></div></div>
+                <div class="scope-item"><div class="scope-header"><span class="scope-name">New Construction</span><span class="scope-value">$1.60M (89%)</span></div><div class="scope-bar"><div class="scope-fill orange" style="width: 89%"></div></div></div>
+                <div class="scope-item"><div class="scope-header"><span class="scope-name">Shades</span><span class="scope-value">$70K (4%)</span></div><div class="scope-bar"><div class="scope-fill green" style="width: 4%"></div></div></div>
+                <div class="scope-item"><div class="scope-header"><span class="scope-name">AV</span><span class="scope-value">$67K (4%)</span></div><div class="scope-bar"><div class="scope-fill purple" style="width: 4%"></div></div></div>
+                <div class="scope-item"><div class="scope-header"><span class="scope-name">Lighting Fixtures</span><span class="scope-value">$50K (3%)</span></div><div class="scope-bar"><div class="scope-fill orange" style="width: 3%"></div></div></div>
                 <div class="scope-item"><div class="scope-header"><span class="scope-name">Security</span><span class="scope-value">$11K (1%)</span></div><div class="scope-bar"><div class="scope-fill red" style="width: 1%"></div></div></div>
+                <div class="scope-item"><div class="scope-header"><span class="scope-name">Network</span><span class="scope-value">$2K (0%)</span></div><div class="scope-bar"><div class="scope-fill pink" style="width: 1%"></div></div></div>
+                <div class="scope-item"><div class="scope-header"><span class="scope-name">Renovation</span><span class="scope-value">$0 (0%)</span></div><div class="scope-bar"><div class="scope-fill green" style="width: 0%"></div></div></div>
             </div>
         </div>
         <div id="reps" class="tab-content">
-            <div class="alert"><h3>⚠️ Pipeline Concentration Risk</h3><p>Nick holds 98% of total pipeline value ($1.2M). Consider load balancing to reduce risk and develop other reps.</p><p>Ed has 7 opportunities with no assigned values - these need scoping and qualification.</p></div>
+            <div class="alert"><h3>⚠️ Pipeline Concentration Risk</h3><p>Nick holds 97% of total pipeline value ($1.74M). Consider load balancing to reduce risk and develop other reps.</p><p>4 opportunities remain unrated - these need likelihood assessment for better forecasting.</p></div>
             <div class="rep-cards">
-                <div class="rep-card orange"><h3>🧔🏻 Nick</h3><div class="stat-item"><span class="stat-label">YTD Closed</span><span class="stat-value">$134K</span></div><div class="stat-item"><span class="stat-label">Opportunities</span><span class="stat-value">11</span></div><div class="stat-item"><span class="stat-label">Pipeline Value</span><span class="stat-value">$1.35M</span></div><div class="stat-item"><span class="stat-label">% of Total</span><span class="stat-value">99%</span></div><div class="stat-item"><span class="stat-label">Avg Deal Size</span><span class="stat-value">$123K</span></div></div>
-                <div class="rep-card green"><h3>👨🏼 Matt</h3><div class="stat-item"><span class="stat-label">Opportunities</span><span class="stat-value">1</span></div><div class="stat-item"><span class="stat-label">Pipeline Value</span><span class="stat-value">$11K</span></div><div class="stat-item"><span class="stat-label">% of Total</span><span class="stat-value">1%</span></div><div class="stat-item"><span class="stat-label">Avg Deal Size</span><span class="stat-value">$11K</span></div></div>
-                <div class="rep-card yellow"><h3>👨🏻‍🦳 Ed</h3><div class="stat-item"><span class="stat-label">YTD Closed</span><span class="stat-value">$45K</span></div><div class="stat-item"><span class="stat-label">Opportunities</span><span class="stat-value">4</span></div><div class="stat-item"><span class="stat-label">Pipeline Value</span><span class="stat-value">$0</span></div><div class="stat-item"><span class="stat-label">% of Total</span><span class="stat-value">0%</span></div><div class="stat-item"><span class="stat-label">Status</span><span class="stat-value warning">Needs Scoping</span></div></div>
+                <div class="rep-card orange"><h3>🧔🏻 Nick</h3><div class="stat-item"><span class="stat-label">YTD Closed</span><span class="stat-value">$219K</span></div><div class="stat-item"><span class="stat-label">Change Orders</span><span class="stat-value">$84K</span></div><div class="stat-item"><span class="stat-label">Opportunities</span><span class="stat-value">15</span></div><div class="stat-item"><span class="stat-label">Pipeline Value</span><span class="stat-value">$1.74M</span></div><div class="stat-item"><span class="stat-label">% of Total</span><span class="stat-value">97%</span></div><div class="stat-item"><span class="stat-label">Avg Deal Size</span><span class="stat-value">$116K</span></div></div>
+                <div class="rep-card green"><h3>👨🏼 Ed</h3><div class="stat-item"><span class="stat-label">YTD Closed</span><span class="stat-value">$55K</span></div><div class="stat-item"><span class="stat-label">Change Orders</span><span class="stat-value">$10K</span></div><div class="stat-item"><span class="stat-label">Opportunities</span><span class="stat-value">5</span></div><div class="stat-item"><span class="stat-label">Pipeline Value</span><span class="stat-value">$43K</span></div><div class="stat-item"><span class="stat-label">% of Total</span><span class="stat-value">2%</span></div><div class="stat-item"><span class="stat-label">Avg Deal Size</span><span class="stat-value">$8.6K</span></div></div>
+                <div class="rep-card yellow"><h3>👨🏼 Matt</h3><div class="stat-item"><span class="stat-label">YTD Closed</span><span class="stat-value">$2K</span></div><div class="stat-item"><span class="stat-label">Change Orders</span><span class="stat-value">$1.5K</span></div><div class="stat-item"><span class="stat-label">Opportunities</span><span class="stat-value">1</span></div><div class="stat-item"><span class="stat-label">Pipeline Value</span><span class="stat-value">$11K</span></div><div class="stat-item"><span class="stat-label">% of Total</span><span class="stat-value">1%</span></div><div class="stat-item"><span class="stat-label">Avg Deal Size</span><span class="stat-value">$11K</span></div></div>
                 <div class="rep-card gray"><h3>🧔🏻 Patrick</h3><div class="stat-item"><span class="stat-label">Opportunities</span><span class="stat-value">4</span></div><div class="stat-item"><span class="stat-label">Pipeline Value</span><span class="stat-value">$1.6K</span></div><div class="stat-item"><span class="stat-label">% of Total</span><span class="stat-value">0%</span></div><div class="stat-item"><span class="stat-label">Avg Deal Size</span><span class="stat-value">$400</span></div></div>
             </div>
         </div>
@@ -423,50 +426,54 @@
             <div class="section">
                 <h2>Project Mix Analysis</h2>
                 <div class="summary-grid">
-                    <div class="summary-card orange"><h3>Long Term Projects</h3><div class="big-value">$1.17M</div><p>7 projects • 95% of pipeline</p><p style="margin-top: 10px;">Large new construction deals with longer sales cycles</p></div>
-                    <div class="summary-card green"><h3>Express Install</h3><div class="big-value">$65K</div><p>5 projects • 5% of pipeline</p><p style="margin-top: 10px;">Quick turnaround projects for cash flow</p></div>
-                    <div class="summary-card gray"><h3>Undefined</h3><div class="big-value">$0</div><p>5 projects • Need scoping</p><p style="margin-top: 10px;">Require definition and value assignment</p></div>
+                    <div class="summary-card orange"><h3>Long Term Projects</h3><div class="big-value">$1.68M</div><p>13 projects • 94% of pipeline</p><p style="margin-top: 10px;">Large new construction deals with longer sales cycles</p></div>
+                    <div class="summary-card green"><h3>Express Install</h3><div class="big-value">$117K</div><p>9 projects • 6% of pipeline</p><p style="margin-top: 10px;">Quick turnaround projects for cash flow</p></div>
+                    <div class="summary-card blue"><h3>Change Orders</h3><div class="big-value">$96K</div><p>YTD closed • Recurring revenue</p><p style="margin-top: 10px;">Nick $84K • Ed $10K • Matt $2K • Service $0.4K</p></div>
+                    <div class="summary-card gray"><h3>Undefined</h3><div class="big-value">$0</div><p>3 projects • Need scoping</p><p style="margin-top: 10px;">Require definition and value assignment</p></div>
                 </div>
             </div>
             <div class="section">
                 <h2>Scope Details</h2>
                 <div class="data-grid">
-                    <div class="data-card"><h3>🏗️ New Construction</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">5</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$1.09M</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$218K</span></div></div>
+                    <div class="data-card"><h3>🏗️ New Construction</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">9</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$1.60M</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$178K</span></div></div>
+                    <div class="data-card"><h3>🪟 Shades</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">5</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$70K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$14K</span></div></div>
+                    <div class="data-card"><h3>📺 AV Systems</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">3</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$67K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$22K</span></div></div>
                     <div class="data-card"><h3>💡 Lighting Fixtures</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">1</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$50K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$50K</span></div></div>
-                    <div class="data-card"><h3>📺 AV Systems</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">2</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$39K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$20K</span></div></div>
-                    <div class="data-card"><h3>🪟 Shades</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">2</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$25K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$13K</span></div></div>
-                    <div class="data-card"><h3>🌐 Network</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">1</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$15K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$15K</span></div></div>
-                    <div class="data-card"><h3>🔒 Security</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">1</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$11K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$11K</span></div></div>
+                    <div class="data-card"><h3>🔒 Security</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">4</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$11K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$2.8K</span></div></div>
+                    <div class="data-card"><h3>🌐 Network</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">2</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$1.6K</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$800</span></div></div>
+                    <div class="data-card"><h3>🔨 Renovation</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">1</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$0</span></div><div class="data-row"><span class="data-label">Avg Value</span><span class="data-value">$0</span></div></div>
                 </div>
             </div>
         </div>
         <div id="likelihood" class="tab-content">
             <div class="likelihood-cards">
-                <div class="likelihood-card high"><h3>🎯 90% Likely</h3><div class="likelihood-value">$690K</div><div class="likelihood-details"><p>3 opportunities</p><p>Weighted: $621K</p></div><div class="likelihood-footer">High confidence deals - focus on closing</div></div>
-                <div class="likelihood-card medium"><h3>📈 70% Likely</h3><div class="likelihood-value">$475K</div><div class="likelihood-details"><p>5 opportunities</p><p>Weighted: $333K</p></div><div class="likelihood-footer">Active pipeline - nurture to close</div></div>
-                <div class="likelihood-card low"><h3>❓ Not Rated</h3><div class="likelihood-value">$0</div><div class="likelihood-details"><p>8 opportunities</p><p>Weighted: $0</p></div><div class="likelihood-footer">Need qualification & value assignment</div></div>
+                <div class="likelihood-card high"><h3>🎯 High Confidence (90%)</h3><div class="likelihood-value">$850K</div><div class="likelihood-details"><p>8 opportunities</p><p>Weighted: $765K</p></div><div class="likelihood-footer">High confidence deals - focus on closing</div></div>
+                <div class="likelihood-card medium"><h3>📈 Medium Confidence (50-70%)</h3><div class="likelihood-value">$900K</div><div class="likelihood-details"><p>11 opportunities</p><p>Weighted: $547K</p></div><div class="likelihood-footer">Active pipeline - nurture to close</div></div>
+                <div class="likelihood-card low"><h3>❓ Low / Unrated</h3><div class="likelihood-value">$50K</div><div class="likelihood-details"><p>6 opportunities</p><p>Weighted: $15K</p></div><div class="likelihood-footer">Need qualification & likelihood assessment</div></div>
             </div>
             <div class="section">
                 <h2>Weighted Forecast Analysis</h2>
                 <div class="forecast-box">
                     <div class="forecast-metrics">
-                        <div class="forecast-metric"><div class="forecast-metric-label">Total Pipeline Value</div><div class="forecast-metric-value orange">$1.37M</div></div>
-                        <div class="forecast-metric"><div class="forecast-metric-label">Weighted Value</div><div class="forecast-metric-value green">$1.04M</div></div>
+                        <div class="forecast-metric"><div class="forecast-metric-label">Total Pipeline Value</div><div class="forecast-metric-value orange">$1.80M</div></div>
+                        <div class="forecast-metric"><div class="forecast-metric-label">Weighted Value</div><div class="forecast-metric-value green">$1.33M</div></div>
                     </div>
-                    <div class="forecast-progress"><div class="progress-bar" style="height: 10px;"><div class="progress-fill" style="width: 76%;"></div></div></div>
-                    <div class="forecast-footer">76% Confidence Factor • Based on likelihood ratings of qualified opportunities</div>
+                    <div class="forecast-progress"><div class="progress-bar" style="height: 10px;"><div class="progress-fill" style="width: 74%;"></div></div></div>
+                    <div class="forecast-footer">73.8% Confidence Factor • Based on likelihood ratings of qualified opportunities</div>
                 </div>
                 <div class="action-cards">
-                    <div class="action-card warning"><h3>⚠️ Action Required</h3><p>8 opportunities lack likelihood ratings, limiting forecast accuracy. Priority action needed to assess and rate these deals.</p></div>
-                    <div class="action-card info"><h3>💡 Focus Opportunity</h3><p>$690K in 90% deals represents your highest confidence pipeline. Prioritize these 3 projects for Q1 closing to hit revenue targets.</p></div>
+                    <div class="action-card warning"><h3>⚠️ Action Required</h3><p>4 opportunities lack likelihood ratings, limiting forecast accuracy. Priority action needed to assess and rate these deals.</p></div>
+                    <div class="action-card info"><h3>💡 Focus Opportunity</h3><p>$850K in 90% deals represents your highest confidence pipeline. Prioritize these 8 projects for near-term closing to hit revenue targets.</p></div>
                 </div>
             </div>
             <div class="section">
                 <h2>Pipeline Breakdown by Likelihood</h2>
                 <div class="data-grid">
-                    <div class="data-card"><h3>High Confidence (90%)</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">3</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$690K</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$621K</span></div><div class="project-list"><strong>Projects:</strong> Point House ($300K), Roux ($250K), Bruce Cabin ($140K)</div></div>
-                    <div class="data-card"><h3>Medium Confidence (70%)</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">7</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$540K</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$378K</span></div><div class="project-list"><strong>Top Projects:</strong> Peebles ($300K), Schwedel ($100K), Soundtoys ($50K)</div></div>
-                    <div class="data-card"><h3>Unrated Opportunities</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">8</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value">$0</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$0</span></div><div class="project-list"><strong>Action:</strong> These opportunities need scoping, value assignment, and likelihood assessment</div></div>
+                    <div class="data-card"><h3>High Confidence (90%)</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">8</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$850K</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$765K</span></div><div class="project-list"><strong>Projects:</strong> Point House ($300K), Roux ($250K), Bruce Cabin ($140K), McBride Lighting ($100K), Tom Ryden ($30K), Casey Mike ($20K), Matsoukas ($10K), Buddo ($0)</div></div>
+                    <div class="data-card"><h3>Medium Confidence (70%)</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">7</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$488K</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$342K</span></div><div class="project-list"><strong>Top Projects:</strong> Peebles ($300K), Schwedel ($100K), Thistle Hill ($39K), Russ Chalom ($25K)</div></div>
+                    <div class="data-card"><h3>Medium-Low (50%)</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">4</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$412K</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$206K</span></div><div class="project-list"><strong>Projects:</strong> McBride Theater ($250K), Sugarbush ($150K), Elizabeth Williamson Shades ($10K), Cronin ($1.6K)</div></div>
+                    <div class="data-card"><h3>Low Confidence (30%)</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">2</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value accent">$50K</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$15K</span></div><div class="project-list"><strong>Projects:</strong> Soundtoys ($50K), Elizabeth Williamson ($0)</div></div>
+                    <div class="data-card"><h3>Unrated Opportunities</h3><div class="data-row"><span class="data-label">Projects</span><span class="data-value">4</span></div><div class="data-row"><span class="data-label">Total Value</span><span class="data-value">$0</span></div><div class="data-row"><span class="data-label">Weighted Value</span><span class="data-value">$0</span></div><div class="project-list"><strong>Action:</strong> Nissenbaum, Rothberg, Blair Peterson, Linder need likelihood assessment</div></div>
                 </div>
             </div>
         </div>
@@ -487,7 +494,7 @@
         }
         window.addEventListener('load', () => {
             animateProgressBars();
-            setTimeout(() => { const p = document.querySelector('.ytd-progress'); if(p) p.style.width = '42.8%'; }, 300);
+            setTimeout(() => { const p = document.querySelector('.ytd-progress'); if(p) p.style.width = '61.4%'; }, 300);
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -507,12 +514,12 @@
         };
         new Chart(document.getElementById('clientTypeChart'), {
             type: 'doughnut',
-            data: { labels: ['Architect','Builder','Repeat Client','Client Referral'], datasets: [{ data: [850000,240000,76000,64000], backgroundColor: ['#f99f34','#d4af37','#4a9eff','#a855f7'], borderColor: '#0a0a0a', borderWidth: 2, hoverOffset: 8 }] },
+            data: { labels: ['Architect','Builder','Repeat Client','Client Referral','Other Marketing'], datasets: [{ data: [1360000,248000,82600,64000,45000], backgroundColor: ['#f99f34','#d4af37','#4a9eff','#a855f7','#6b7280'], borderColor: '#0a0a0a', borderWidth: 2, hoverOffset: 8 }] },
             options: { ...chartOpts, cutout: '55%' }
         });
         new Chart(document.getElementById('partnerChart'), {
             type: 'doughnut',
-            data: { labels: ['ELD','TrueX Cullins','Birdseye','New School','Direct/Other'], datasets: [{ data: [300000,250000,140000,100000,440000], backgroundColor: ['#f99f34','#d4af37','#4a9eff','#a855f7','#6b7280'], borderColor: '#0a0a0a', borderWidth: 2, hoverOffset: 8 }] },
+            data: { labels: ['TrueX Cullins','Sidehill Design','ELD','Birdseye','New School','Direct/Other'], datasets: [{ data: [400000,350000,300000,140000,100000,509600], backgroundColor: ['#f99f34','#d4af37','#4a9eff','#a855f7','#22c55e','#6b7280'], borderColor: '#0a0a0a', borderWidth: 2, hoverOffset: 8 }] },
             options: { ...chartOpts, cutout: '55%' }
         });
     </script>
